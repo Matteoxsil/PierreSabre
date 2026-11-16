@@ -12,7 +12,7 @@ public class Humain {
 		this.favoriteDrink = favoriteDrink;
 		this.money = money;
 	}
-	public void parler(String texte) {
+	protected void parler(String texte) {
 		System.out.println("(" + name + ") - " + texte);
 	}
 	public void direBonjour() {
@@ -21,10 +21,10 @@ public class Humain {
 	public void boire() {
 		parler("MMMM, un bon verre de " + favoriteDrink + " ! GLOUPS !");
 	}
-	private void gagnerArgent(int gain) {
+	protected void gagnerArgent(int gain) {
 		money += gain;
 	}
-	private void perdreArgent(int perte) {
+	protected void perdreArgent(int perte) {
 		money -= perte;
 	}
 	public void acheter(String bien, int prix) {
